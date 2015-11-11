@@ -1,0 +1,49 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# yritys
+
+Polls is a simple API allowing consumers to view polls and vote in them.
+
+## Query [/query]
+
+### Query companies [GET]
+
++ Request (application/json)
+
+        {
+            "query_string": "Helsinki and Turku",
+            "limit" : "20",
+            "offset": "0",
+            "saved_search_id": "14280",
+            "last_modified" : "2015-07-21T08:32:12.321Z"
+        }
+
++ Response 200 (application/json)
+
+        [
+            {
+                "query_string": "Helsinki and Turku",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "result_count": "4",
+                "last_modified": "2015-07-21T08:32:12.321Z",
+                "execution_time": "93",
+                "limit" : "20",
+                "offset": "0",
+                "order":"id",
+                "saved_search_id": "14280"
+                "result_list": [
+                    {
+                        "id": "283",
+                    }, {
+                        "id": "1283",
+                    }, {
+                        "id": "2283",
+                    }, {
+                        "id": "2833",
+                    }
+                ]
+            }
+        ]
+
+
