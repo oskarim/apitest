@@ -1,46 +1,64 @@
 FORMAT: 1A
 HOST: http://polls.apiblueprint.org/
 
-# yritys
+# QueryV
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+QueryV is api for querying items.
 
-## Query [/query]
+## Query [/api/v1/phone/]
 
 ### Query companies [GET]
 
 + Request (application/json)
 
         {
-            "query_string": "Helsinki and Turku",
-            "limit" : "20",
-            "offset": "0",
-            "saved_search_id": "14280",
-            "last_modified" : "2015-07-21T08:32:12.321Z"
+            "user": "example",
+            "passwd": "secret",
+            "query_string": "0404040404",
         }
 
 + Response 200 (application/json)
 
         [
             {
-                "query_string": "Helsinki and Turku",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "result_count": "4",
-                "last_modified": "2015-07-21T08:32:12.321Z",
-                "execution_time": "93",
-                "limit" : "20",
-                "offset": "0",
-                "order":"id",
-                "saved_search_id": "14280"
+                "query_string": "0404040404",
+                "result_count": "2",
                 "result_list": [
                     {
-                        "id": "283",
-                    }, {
-                        "id": "1283",
-                    }, {
-                        "id": "2283",
-                    }, {
-                        "id": "2833",
+                        "business_id": "01658672", 
+                        "company_name": "Pertunmaan kunta", 
+                        "link": "http://www.pertunmaa.fi", 
+                        "industry_code_2": 84, 
+                        "industry_code_5": 84110, 
+                        "address": "Pertuntie 14", 
+                        "postal": "19430", 
+                        "city": "PERTUNMAA", 
+                        "country": "FI", 
+                        "technologies": [
+                            "Softlayer.com", 
+                            "Wordpress", 
+                            "Hotmail.com", 
+                            "Javascript", 
+                            "Office365 email", 
+                            "Facebook", 
+                            "Csl.de", 
+                            "Apache", 
+                            "Fi", 
+                            "Php", 
+                            "Debian", 
+                            "Jquery", 
+                            "Outlook.com", 
+                            "Google analytics", 
+                            "Joker.com", 
+                            "Www", 
+                            "En", 
+                            "Instagram", 
+                            "Oma nimipalvelin", 
+                            "Apache/2.4.10", 
+                            "Google font api", 
+                            "Io-tek.com"
+                        ], 
+                        "conclusions": []
                     }
                 ]
             }
